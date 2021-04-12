@@ -25,6 +25,14 @@ class _MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<_MyHomePage> {
+  late TooltipBehavior _tooltipBehavior;
+
+  @override
+  void initState() {
+    _tooltipBehavior = TooltipBehavior(enable: true);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +52,7 @@ class _MyHomePageState extends State<_MyHomePage> {
                 // Enable legend
                 legend: Legend(isVisible: true),
                 // Enable tooltip
-                tooltipBehavior: TooltipBehavior(enable: true),
+                tooltipBehavior: _tooltipBehavior,
                 series: <ChartSeries<_SalesData, String>>[
                   ColumnSeries<_SalesData, String>(
                     // animationDuration: 0,
