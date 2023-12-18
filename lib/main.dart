@@ -53,7 +53,7 @@ class _MyHomePageState extends State<_MyHomePage> {
                 legend: Legend(isVisible: true),
                 // Enable tooltip
                 tooltipBehavior: _tooltipBehavior,
-                series: <ChartSeries<_SalesData, String>>[
+                series: <ColumnSeries<_SalesData, String>>[
                   ColumnSeries<_SalesData, String>(
                     // animationDuration: 0,
                     dataSource: <_SalesData>[
